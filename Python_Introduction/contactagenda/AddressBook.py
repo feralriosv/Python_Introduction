@@ -25,6 +25,7 @@ class AddressBook:
     def __str__(self):
         contact_list = []
         number_of_contacts = len(self.__contacts)
+        contact_list.append("~" + self.__title + "~")
         for i in range(number_of_contacts):
             contact_list.append(self.__contacts[i].__str__())
         return os.linesep.join(contact_list)
